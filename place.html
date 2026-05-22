@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uruguay</title>
+    <link rel="stylesheet" href="styles/place.css">
+</head>
+<body>
+    <header>
+        <h1>Uruguay</h1>
+        <img srcset="
+            images/uruguay-small.webp 480w,
+            images/uruguay-medium.webp 768w,
+            images/uruguay-large.webp 1200w"
+            src="images/uruguay-large.webp"
+            alt="Photo of the Palacio Salvo in Montevideo, Uruguay">
+    </header>
+
+    <main>
+        <section class="data">
+            <h2>Data</h2>
+            <p><strong>Area:</strong> 176,215 sq km</p>
+            <p><strong>Population:</strong> 3,499,451</p>
+            <p><strong>Capital:</strong> Montevideo</p>
+            <p><strong>Languages:</strong> Spanish</p>
+            <p><strong>Currency:</strong> Uruguayan Peso</p>
+            <p><strong>Time Zone:</strong> UTC-3</p>
+            <p><strong>Calling Code:</strong> +598</p>
+            <p><strong>Internet TLD:</strong> .uy</p>
+        </section>
+        
+        <section class="weather">
+            <h2>Weather</h2>
+            <p><strong>Temperature:</strong> 8 °C</p>
+            <p><strong>Conditions:</strong> Partly Cloudy</p>
+            <p><strong>Wind:</strong> 12 km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill">Calculando...</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> Ezequiel Piccardo | Uruguay</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script defer src="scripts/place.js"></script>
+
+</body>
+</html>     
