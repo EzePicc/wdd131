@@ -68,10 +68,6 @@ main {
     font-weight: bold;
 }
 
-.weather h2::after {
-    content: " ⛅";
-}
-
 footer {
     background-color: var(--primary-color);
     color: white;
