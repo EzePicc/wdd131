@@ -14,3 +14,15 @@ function displayWindChill() {
         windchillElement.textContent = 'N/A';
     }
 }
+
+function displayYear() {
+    document.getElementById('year').textContent = new Date().getFullYear();
+}
+
+function displayLastModified() {
+    document.getElementById('lastModified').textContent = document.lastModified;
+}
+
+displayYear();
+displayLastModified();
+displayWindChill();
