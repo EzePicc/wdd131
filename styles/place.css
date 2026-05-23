@@ -100,3 +100,11 @@ footer p {
         padding: 30px;
     }
 }
+.weather h2::after {
+    content: "";
+    display: inline-block;
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
