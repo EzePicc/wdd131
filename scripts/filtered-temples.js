@@ -76,9 +76,15 @@ function showTemples(list) {
   gallery.innerHTML = list.map(t => `
     <figure>
       <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
-      <figcaption>${t.templeName}</figcaption>
+      <figcaption>
+        <h2>${t.templeName}</h2>
+        <p>Location: ${t.location}</p>
+        <p>Dedicated: ${t.dedicated}</p>
+        <p>Area: ${t.area.toLocaleString()} sq ft</p>
+      </figcaption>
     </figure>
   `).join('');
+
 }
  
 const hamburger = document.getElementById('hamburger');
