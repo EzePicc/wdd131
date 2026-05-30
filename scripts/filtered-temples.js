@@ -53,21 +53,21 @@ const temples = [
     location: "Buenos Aires, Argentina",
     dedicated: "1986, January, 17",
     area: 11699,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/buenos-aires-argentina/400x250/buenos-aires-argentina-temple-night-1199899-wallpaper.jpg"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZcCou_ZSRpYwevGw4Lu_Z5YKOCyzW2vMs3w&s"
   },
   {
     templeName: "Santiago Chile",
     location: "Santiago, Chile",
     dedicated: "1983, September, 15",
     area: 13898,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/santiago-chile/400x250/santiago-chile-temple-exterior-1416705-wallpaper.jpg"
+    imageUrl: "https://www.faroalasnaciones.com/wp-content/uploads/2022/11/0604e00377474ca519f263ea54d84109stgo.jpg"
   },
   {
     templeName: "Bogotá Colombia",
     location: "Bogotá, Colombia",
     dedicated: "1999, April, 24",
     area: 13074,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bogota-colombia/400x250/bogota-colombia-temple-exterior-1562658-wallpaper.jpg"
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/89b209718a7ed41649a497893e240972b7cfd036/full/800%2C/0/default"
   }
 ];
 
