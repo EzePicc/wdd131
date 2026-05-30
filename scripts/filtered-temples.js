@@ -53,21 +53,61 @@ const temples = [
     location: "Buenos Aires, Argentina",
     dedicated: "1986, January, 17",
     area: 11699,
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZcCou_ZSRpYwevGw4Lu_Z5YKOCyzW2vMs3w&s"
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Buenos_Aires_Argentina_Temple_by_nadiamercer_crop.jpeg/960px-Buenos_Aires_Argentina_Temple_by_nadiamercer_crop.jpeg"
   },
   {
     templeName: "Santiago Chile",
     location: "Santiago, Chile",
     dedicated: "1983, September, 15",
     area: 13898,
-    imageUrl: "https://www.faroalasnaciones.com/wp-content/uploads/2022/11/0604e00377474ca519f263ea54d84109stgo.jpg"
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Templo_de_Santiago%2C_Providencia_20220501_02.jpg/960px-Templo_de_Santiago%2C_Providencia_20220501_02.jpg"
   },
   {
     templeName: "Bogotá Colombia",
     location: "Bogotá, Colombia",
     dedicated: "1999, April, 24",
     area: 13074,
-    imageUrl: "https://www.churchofjesuschrist.org/imgs/89b209718a7ed41649a497893e240972b7cfd036/full/800%2C/0/default"
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_SUD_en_Bogot%C3%A1.jpg/960px-Iglesia_SUD_en_Bogot%C3%A1.jpg"
   }
 ];
 
+function showTemples(list) {
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = list.map(t => `
+    <figure>
+      <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
+      <figcaption>${t.templeName}</figcaption>
+    </figure>
+  `).join('');
+}
+ 
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+ 
+hamburger.addEventListener('click', function() 
+{
+    hamburger.classList.toggle('open');
+    navMenu.classList.toggle('active');
+});
+ 
+const navLinks = navMenu.querySelectorAll('a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        const filter = this.dataset.filter;
+        let result;
+        if (filter === 'old') {
+            result = temples.filter(t => parseInt(t.dedicated) < 1900);
+        } else if (filter === 'new') {
+            result = temples.filter(t => parseInt(t.dedicated) > 2000);
+        } else if (filter === 'large') {
+            result = temples.filter(t => t.area > 90000);
+        } else if (filter === 'small') {
+            result = temples.filter(t => t.area < 10000);
+        } else {
+            result = temples;
+        }
+        showTemples(result);
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('active');
+    });
+});
