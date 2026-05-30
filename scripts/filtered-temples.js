@@ -84,7 +84,6 @@ function showTemples(list) {
       </figcaption>
     </figure>
   `).join('');
-
 }
  
 const hamburger = document.getElementById('hamburger');
