@@ -10,8 +10,52 @@
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
+  <header>
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">Tierra &amp; Trazo</a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">-Catalog-</a></li>
+          <li><a href="contact.html" class="active">-Contact-</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </header>
+  <main>
+    <section>
+      <h2>Contact Us</h2>
+      <p id="welcome-msg"></p>
+      <form id="contact-form">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="topic">Topic</label>
+
+        <select id="topic" name="topic" required>
+          <option value="">Select topic</option>
+          <option value="products">Products</option>
+          <option value="orders">Orders</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+        
+      </form>
+
+      <p id="form-response"></p>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; <span id="year"></span>Tierra &amp; Trazo | <a href="references.html">References</a></p>
+    <p>&copy; <span id="year"></span> Tierra &amp; Trazo | <a href="references.html">References</a></p>
   </footer>
   <script src="scripts/main.js"></script>
   <script src="scripts/contact.js"></script>
