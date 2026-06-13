@@ -72,3 +72,40 @@ nav a:hover, nav a.active {
   display: inline-block;
 }
 .btn:hover { background-color: var(--ochre); color: var(--bark); }
+
+section {
+  padding: 3rem 5%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--bark);
+  margin-bottom: 1.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.product-card {
+  background: var(--cream);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+.product-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--bark);
+  margin-bottom: 0.3rem;
+}
+.product-card p { font-size: 0.9rem; }
